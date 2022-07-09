@@ -1,0 +1,4 @@
+Nota: El argumento intervaloDeTiempo se convierte aun entero con 
+signo de 32 bits. Esto limita efectivamente al intervaloDeTiempo 
+a valores de 2147483647 ms, ya que se especifica como entero 
+con signo en el IDL.
