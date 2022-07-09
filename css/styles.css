@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+
+div, input{
+    width:200px;
+}
+
+div {
+    border : 1px solid red;
+    background-color: rgb(240, 240, 125);
+    color: darkred;
+    padding: 5px;
+    margin: 2px 0 10px 0;
+    border-radius: 5px;
+    display: none;    
+}
