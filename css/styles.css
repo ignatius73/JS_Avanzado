@@ -2,29 +2,45 @@
 
 *{
     box-sizing: border-box;
-    width: 100vw;
-    overflow: hidden;
+     
 
 }
+
 
 :root{
     --principal: hsl(174, 61%, 33%);
     --secondary: hsl(245, 85%, 73%);
     --typos: hsl(204, 68%, 70%);
     --effects:hsl(173, 53%, 62%);
+    --text:hsl(0, 5%, 25%);
     
 }
 
 body{
+    display:flex;
+    flex-direction: column;
     margin:0;
     padding:0;
     background-color: var(--secondary);
     min-height: 100vh;
     color: var(--typos);
     font-family: 'Fira', sans-serif;
+    font-size:16px;
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    
+    
+}
+
+section{
+    min-height: 100%;
 }
 
 nav{
+    position:absolute;
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -72,12 +88,160 @@ i{
 }
 
 .show{
-   transform: translateX(250px);
-   transition: transform .5s ease-in-out;
+   margin-left:0px;
+   transition: margin-left .5s ease-in-out;
    
 }
 .hide{
-   transform: translateX(-250px);
-   transition: transform .5s ease-in-out;
+   margin-left:-250px;
+   transition: margin-left .5s ease-in-out;
    
 }
+
+.about{
+   display:flex;
+   flex-direction:column;
+   justify-content: flex-end;
+   background-image: url(/assets/craig.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   min-height:90vh;
+   
+}
+ 
+.about p{
+    padding:10px;
+    background-color: rgba(0,0,0, 50%);
+    margin-bottom: 50px;
+    font-size: 0.7rem;
+
+} 
+
+.home{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width:100vw;
+    min-height: 100vh;
+    background-image: url(/JS_Avanzado/assets/home.jpg);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center;
+    
+}
+
+h1{
+    color:var(--text);
+    text-align: center;
+}
+
+.content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    
+   
+}
+
+.content form{
+    width:90vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+
+}
+
+.content form > input, textarea{
+    width:80%;
+}
+
+
+
+
+
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    width:100%;
+    height: 200px;
+    
+}
+
+.button button{
+    width:80%;
+    border-radius: 5px;
+    border:0px;
+    height: 30px;
+
+}
+
+.job-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    padding:50px;
+    text-align: center;
+
+   
+}
+
+.job{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    width:80%;
+}
+.job img{
+    width:70%;
+}
+.job h1{
+    
+    font-size: 0.7rem;
+
+}
+
+
+@media screen and (min-width:480px){
+
+
+    .hamburguer{
+        display:none;
+    }
+
+    main{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height:80vh;
+    }
+    nav{
+        flex-direction: row;
+        width: 100vw;
+        background-color: var(--effects);
+        margin-left:0px;
+        min-height: auto;  
+    
+    }
+
+    .about p{
+        font-size:1rem;
+        margin-bottom: 10px;
+    }
+}
+
+
